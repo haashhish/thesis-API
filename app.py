@@ -19,7 +19,8 @@ from transformers import BertTokenizer, BertModel, AdamW, get_linear_schedule_wi
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import pandas as pd
-import csv
+key = os.environ["API_KEY"]
+
 
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,7 +29,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 nltk.download('punkt')
 
   # Replace with your OpenAI API key
-OpenAI.api_key = "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"  # Replace with your OpenAI API key
+OpenAI.api_key = key # Replace with your OpenAI API key
+
 
 # Define the model engine
 model_engine = "gpt-3.5-turbo"
